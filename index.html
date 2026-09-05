@@ -3,247 +3,258 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Moh. Rayhan | Personal Website</title>
+<title>Moh. Rayhan Pratama | Informatics Student</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
-    scroll-behavior:smooth;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+  font-family:'Poppins',sans-serif;
 }
 
 body{
-    background:linear-gradient(135deg,#050816,#0f172a,#111827);
-    color:white;
-    overflow-x:hidden;
+  background:#f8fafc;
+  color:#1e293b;
 }
-
-body::before{
-    content:"";
-    position:fixed;
-    width:500px;
-    height:500px;
-    background:#00d9ff25;
-    filter:blur(140px);
-    top:-120px;
-    right:-120px;
-    z-index:-1;
-}
-
-body::after{
-    content:"";
-    position:fixed;
-    width:400px;
-    height:400px;
-    background:#3b82f620;
-    filter:blur(120px);
-    bottom:-100px;
-    left:-100px;
-    z-index:-1;
-}
-
-/* NAVBAR */
 
 nav{
-    position:fixed;
-    width:100%;
-    padding:20px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:rgba(0,0,0,.25);
-    backdrop-filter:blur(10px);
-    z-index:999;
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 8%;
+  background:rgba(255,255,255,.85);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #e5e7eb;
+  z-index:1000;
 }
 
 .logo{
-    font-size:24px;
-    font-weight:bold;
-    color:#38bdf8;
+  font-size:22px;
+  font-weight:700;
+  color:#2563eb;
+}
+
+nav ul{
+  display:flex;
+  gap:28px;
+  list-style:none;
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:25px;
-    transition:.3s;
+  text-decoration:none;
+  color:#475569;
+  font-weight:500;
 }
 
 nav a:hover{
-    color:#38bdf8;
+  color:#2563eb;
 }
 
-/* HERO */
-
 header{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:20px;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:120px 20px 60px;
+}
+
+.hero{
+  text-align:center;
+  max-width:760px;
 }
 
 .hero img{
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    border:4px solid #38bdf8;
-    object-fit:cover;
-    box-shadow:0 0 35px #00d9ff88;
-    margin-bottom:25px;
+  width:180px;
+  height:180px;
+  object-fit:cover;
+  border-radius:50%;
+  border:5px solid #2563eb;
+  box-shadow:0 20px 40px rgba(37,99,235,.25);
+  animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-8px)}
 }
 
 .hero h1{
-    font-size:60px;
-    letter-spacing:3px;
-    text-shadow:0 0 25px cyan;
+  font-size:52px;
+  margin-top:24px;
+  color:#0f172a;
 }
 
 .typing{
-    color:#38bdf8;
-    font-size:22px;
-    margin-top:12px;
-    min-height:35px;
+  height:28px;
+  margin-top:10px;
+  color:#2563eb;
+  font-weight:600;
+}
+
+.hero p{
+  margin-top:20px;
+  color:#64748b;
+  line-height:1.8;
 }
 
 .btn{
-    display:inline-block;
-    margin-top:35px;
-    padding:14px 35px;
-    border:2px solid #38bdf8;
-    color:#38bdf8;
-    text-decoration:none;
-    border-radius:30px;
-    transition:.3s;
+  display:inline-block;
+  margin-top:30px;
+  padding:14px 28px;
+  background:#2563eb;
+  color:white;
+  border-radius:14px;
+  text-decoration:none;
+  transition:.3s;
 }
 
 .btn:hover{
-    background:#38bdf8;
-    color:#00111f;
-    box-shadow:0 0 20px cyan;
+  background:#1d4ed8;
+  transform:translateY(-3px);
 }
 
-/* SECTION */
-
 section{
-    max-width:1100px;
-    margin:auto;
-    padding:90px 25px;
+  max-width:1100px;
+  margin:auto;
+  padding:90px 25px;
 }
 
 .title{
-    font-size:36px;
-    color:#38bdf8;
-    margin-bottom:30px;
-    text-align:center;
-}
-
-.about{
-    display:grid;
-    grid-template-columns:260px 1fr;
-    gap:40px;
-    align-items:center;
-}
-
-.photo{
-    width:250px;
-    height:250px;
-    border-radius:50%;
-    background:url("rayhan.jpg") center/cover;
-    border:4px solid #38bdf8;
-    box-shadow:0 0 35px #00d9ff88;
-    margin:auto;
+  text-align:center;
+  font-size:34px;
+  margin-bottom:40px;
 }
 
 .card{
-    background:rgba(255,255,255,.05);
-    border:1px solid rgba(255,255,255,.08);
-    border-radius:20px;
-    padding:25px;
-    backdrop-filter:blur(10px);
+  background:white;
+  padding:32px;
+  border-radius:22px;
+  border:1px solid #e5e7eb;
+  box-shadow:0 10px 30px rgba(15,23,42,.06);
+}
+
+.timeline{
+  border-left:3px solid #2563eb;
+  padding-left:22px;
+}
+
+.timeline h3{
+  color:#2563eb;
 }
 
 .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:20px;
 }
 
 .skill{
-    text-align:center;
+  text-align:center;
+  transition:.3s;
 }
 
-.skill span{
-    font-size:40px;
+.skill:hover{
+  transform:translateY(-6px);
+}
+
+.icon{
+  font-size:42px;
 }
 
 .skill h3{
-    margin:12px 0;
-    color:#38bdf8;
+  margin:15px 0;
+  color:#2563eb;
 }
 
-.contact{
-    text-align:center;
+.social{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:18px;
 }
 
-.contact p{
-    margin:10px 0;
-    font-size:18px;
+.social a{
+  color:white;
+  text-decoration:none;
+  padding:18px;
+  border-radius:16px;
+  text-align:center;
+  font-weight:600;
+  transition:.3s;
 }
+
+.social a:hover{
+  transform:translateY(-5px);
+}
+
+.email{background:#2563eb;}
+.youtube{background:#ff0000;}
+.instagram{background:#e1306c;}
+.tiktok{background:#111827;}
+.discord{background:#5865F2;}
 
 footer{
-    text-align:center;
-    padding:30px;
-    color:#94a3b8;
-    border-top:1px solid rgba(255,255,255,.08);
+  text-align:center;
+  padding:30px;
+  color:#64748b;
+  border-top:1px solid #e5e7eb;
 }
 
-/* Responsive */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:1s;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:none;
+}
 
 @media(max-width:768px){
 
+nav ul{
+display:none;
+}
+
 .hero h1{
-font-size:42px;
+font-size:36px;
 }
 
-.about{
-grid-template-columns:1fr;
-text-align:center;
+.hero img{
+width:150px;
+height:150px;
 }
 
-nav{
-flex-direction:column;
-gap:10px;
-}
-
-nav a{
-margin:0 10px;
+.title{
+font-size:28px;
 }
 
 }
 </style>
+
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-
 <nav>
 
-<div class="logo">RAYHAN</div>
+<div class="logo">MRP.</div>
 
-<div>
-<a href="#about">Tentang</a>
-<a href="#skill">Skill</a>
-<a href="#contact">Kontak</a>
-</div>
+<ul>
+<li><a href="#about">Tentang</a></li>
+<li><a href="#education">Pendidikan</a></li>
+<li><a href="#skills">Skill</a></li>
+<li><a href="#contact">Kontak</a></li>
+</ul>
 
 </nav>
-
-<!-- HERO -->
 
 <header>
 
@@ -251,9 +262,14 @@ margin:0 10px;
 
 <img src="rayhan.jpg" alt="Rayhan">
 
-<h1>MOH. RAYHAN</h1>
+<h1>Moh. Rayhan Pratama</h1>
 
-<p class="typing" id="typing"></p>
+<div class="typing" id="typing"></div>
+
+<p>
+Mahasiswa Informatika yang memiliki minat besar pada dunia teknologi,
+web development, desain visual, serta content creation.
+</p>
 
 <a href="#about" class="btn">Kenali Saya</a>
 
@@ -261,149 +277,199 @@ margin:0 10px;
 
 </header>
 
-<!-- ABOUT -->
-
-<section id="about">
+<section id="about" class="reveal">
 
 <h2 class="title">Tentang Saya</h2>
-
-<div class="about">
-
-<div class="photo"></div>
 
 <div class="card">
 
 <p>
-Halo! Perkenalkan, saya <b>Moh. Rayhan Pratama 
+Halo! Saya <b>Moh. Rayhan Pratama</b>, mahasiswa baru
+<b>Universitas Islam Negeri (UIN) Datokarama Palu</b>
+di Fakultas Sains dan Teknologi, Program Studi Informatika.
 </p>
 
 <br>
 
 <p>
-Saya adalah <b>Mahasiswa Baru Universitas Islam Negeri (UIN) Datokarama Palu</b>,
-Fakultas Sains dan Teknologi, Program Studi Informatika.
+Saya memiliki ketertarikan besar pada dunia teknologi,
+pengembangan website, desain visual, dan content creation.
+Di luar perkuliahan, saya aktif membuat konten seputar
+<b>GTA V Roleplay</b> dan dunia <b>FiveM</b>, sekaligus
+terus mengasah kemampuan di bidang pemrograman
+dan kreativitas digital.
 </p>
 
 <br>
 
 <p>
-Saya memiliki minat besar di bidang teknologi, desain visual, pembuatan website,
-serta pengembangan server GTA V FiveM. Website ini saya buat sebagai media
-perkenalan diri sekaligus tempat menampilkan karya dan perjalanan saya
-sebagai content creator maupun calon web developer.
+Selain itu, saya juga sangat menikmati bermain berbagai jenis game
+dan rutin berolahraga sebagai cara menjaga keseimbangan antara kreativitas,
+fokus, dan kesehatan. Hal yang paling menggambarkan diri saya adalah
+<b>rasa penasaran yang sangat kuat</b>—saya selalu tertarik mencoba hal baru,
+memecahkan masalah, dan terus belajar untuk berkembang menjadi pribadi
+yang lebih baik.
 </p>
 
-</div>
+<br>
+
+<p><b>Motto</b></p>
+
+<p><i>"Belajar dengan tekun, berkarya dengan sepenuh hati, dan berkembang tanpa henti."</i></p>
 
 </div>
 
 </section>
 
-<!-- SKILL -->
+<section id="education" class="reveal">
 
-<section id="skill">
+<h2 class="title">Pendidikan</h2>
+
+<div class="card timeline">
+
+<h3>2026 - Sekarang</h3>
+
+<h2>Universitas Islam Negeri Datokarama Palu</h2>
+
+<p>Fakultas Sains dan Teknologi</p>
+
+<p>Program Studi Informatika</p>
+
+</div>
+
+</section>
+
+<section id="skills" class="reveal">
 
 <h2 class="title">Skill & Minat</h2>
 
 <div class="grid">
 
 <div class="card skill">
-<span>💻</span>
-<h3>HTML • CSS • JavaScript</h3>
-<p>Belajar membuat website modern dan interaktif.</p>
+<div class="icon">💻</div>
+<h3>Web Development</h3>
+<p>HTML, CSS & JavaScript</p>
 </div>
 
 <div class="card skill">
-<span>🎮</span>
-<h3>FiveM Developer</h3>
-<p>Membangun server lokal, QBCore, mapping & roleplay.</p>
+<div class="icon">🎥</div>
+<h3>Content Creator</h3>
+<p>YouTube & Thumbnail Design</p>
 </div>
 
 <div class="card skill">
-<span>🎨</span>
-<h3>Thumbnail Designer</h3>
-<p>Desain YouTube sinematik dengan gaya GTA V.</p>
+<div class="icon">🎮</div>
+<h3>FiveM</h3>
+<p>QBCore & Roleplay</p>
+</div>
+
+<div class="card skill">
+<div class="icon">🏃</div>
+<h3>Gaming & Sport</h3>
+<p>Menjaga keseimbangan antara hobi dan kesehatan</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- CONTACT -->
+<section id="contact" class="reveal">
 
-<section id="contact">
+<h2 class="title">Hubungi Saya</h2>
 
-<h2 class="title">Kontak Saya</h2>
+<div class="social">
 
-<div class="grid">
+<a class="email"
+href="mailto:raayhanpratamaa@gmail.com?subject=Kerja%20Sama&body=Halo%20Moh.%20Rayhan%20Pratama,%20saya%20ingin%20mengajak%20Anda%20bekerja%20sama.">
+📧 Email
+</a>
 
-<div class="card contact">
-<h3>📺 YouTube</h3>
-<p>@xyhanr</p>
-</div>
+<a class="youtube"
+href="https://youtube.com/@xyhanr"
+target="_blank">
+▶ YouTube
+</a>
 
-<div class="card contact">
-<h3>📸 Instagram</h3>
-<p>@xyhanr</p>
-</div>
+<a class="instagram"
+href="https://www.instagram.com/xyhanr"
+target="_blank">
+📷 Instagram
+</a>
 
-<div class="card contact">
-<h3>🎵 TikTok</h3>
-<p>@hans</p>
-</div>
+<a class="tiktok"
+href="https://www.tiktok.com/@444.hansz"
+target="_blank">
+🎵 TikTok
+</a>
+
+<a class="discord"
+href="https://discord.gg/ynEj2mnZdR"
+target="_blank">
+💬 Discord
+</a>
 
 </div>
 
 </section>
 
 <footer>
-© 2026 Moh. Rayhan — All Rights Reserved
+© 2026 Moh. Rayhan Pratama • All Rights Reserved
 </footer>
 
 <script>
 
-const text = [
+const words=[
 "Mahasiswa Baru UIN Datokarama Palu",
-"Fakultas Sains & Teknologi",
-"Program Studi Informatika",
-"Content Creator",
-"Future Full Stack Developer"
+"Fakultas Sains dan Teknologi",
+"Program Studi Informatika"
 ];
 
 let i=0;
 let j=0;
 let del=false;
 
-function typing(){
+function type(){
 
 const el=document.getElementById("typing");
 
 if(!del){
 
-el.innerHTML=text[i].substring(0,j++);
+el.innerHTML=words[i].substring(0,j++);
 
-if(j>text[i].length){
+if(j>words[i].length){
 del=true;
-setTimeout(typing,1500);
+setTimeout(type,1500);
 return;
 }
 
 }else{
 
-el.innerHTML=text[i].substring(0,j--);
+el.innerHTML=words[i].substring(0,j--);
 
 if(j===0){
 del=false;
-i=(i+1)%text.length;
+i=(i+1)%words.length;
 }
 
 }
 
-setTimeout(typing,del?35:80);
+setTimeout(type,del?35:70);
 
 }
 
-typing();
+type();
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("active");
+}
+});
+});
+
+document.querySelectorAll(".reveal").forEach(el=>{
+observer.observe(el);
+});
 
 </script>
 
