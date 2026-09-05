@@ -4,91 +4,267 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Moh. Rayhan Pratama | Portfolio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif;scroll-behavior:smooth}
-body{background:#f8fafc;color:#111827}
-nav{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:18px 8%;background:rgba(255,255,255,.8);backdrop-filter:blur(12px);border-bottom:1px solid #e5e7eb}
-.logo{font-size:24px;font-weight:700;color:#2563eb}
-nav ul{display:flex;gap:24px;list-style:none}
-nav a{text-decoration:none;color:#374151}
-.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:120px 8%;gap:40px}
-.hero img{width:320px;height:320px;border-radius:50%;object-fit:cover;border:6px solid #fff;box-shadow:0 20px 40px rgba(37,99,235,.25)}
-h1{font-size:54px;line-height:1.1}.blue{color:#2563eb}
-.typing{height:28px;color:#2563eb;font-weight:600;margin:12px 0}
-.btn{display:inline-block;margin-top:24px;padding:14px 28px;background:#2563eb;color:#fff;text-decoration:none;border-radius:12px}
-section{padding:90px 8%} .title{text-align:center;font-size:36px;margin-bottom:8px}
-.line{width:80px;height:4px;background:#2563eb;border-radius:999px;margin:0 auto 40px}
-.card{background:#fff;padding:36px;border-radius:24px;box-shadow:0 10px 30px rgba(0,0,0,.05);line-height:1.9}
-.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.skill{background:#fff;padding:26px;border-radius:20px;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.05)}
-.skill i{font-size:40px;color:#2563eb;margin-bottom:12px}
-.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-.contact{display:flex;align-items:center;gap:16px;background:#fff;padding:20px;border-radius:18px;text-decoration:none;color:#111827;box-shadow:0 8px 24px rgba(0,0,0,.05)}
-.icon{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:24px}
-.email .icon{background:#2563eb}.youtube .icon{background:#ff0000}.instagram .icon{background:#e1306c}.tiktok .icon{background:#111}.discord .icon{background:#5865f2}
-footer{text-align:center;padding:30px;color:#64748b;border-top:1px solid #e5e7eb}
-@media(max-width:900px){nav ul{display:none}.hero{grid-template-columns:1fr;text-align:center}.hero img{width:240px;height:240px;margin:auto}h1{font-size:42px}}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth}
+body{background:#F8FAFC;color:#111827}
+nav{position:fixed;top:0;width:100%;padding:18px 8%;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.88);backdrop-filter:blur(12px);border-bottom:1px solid #E5E7EB;z-index:999}
+.logo{font-size:24px;font-weight:700;color:#2563EB}
+nav ul{display:flex;gap:28px;list-style:none}
+nav a{text-decoration:none;color:#475569;font-weight:500}
+nav a:hover{color:#2563EB}
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:120px 8%;gap:50px}
+.hero h4{color:#2563EB;letter-spacing:3px;margin-bottom:10px}
+.hero h1{font-size:58px;line-height:1.1}
+.hero h1 span{color:#2563EB}
+.typing{height:30px;color:#2563EB;font-weight:600;margin:15px 0}
+.hero p{color:#64748B;line-height:1.8}
+.btn{display:inline-block;margin-top:28px;padding:15px 28px;background:#2563EB;color:#fff;text-decoration:none;border-radius:14px;font-weight:600;transition:.3s}
+.btn:hover{background:#1D4ED8;transform:translateY(-3px)}
+.photo{text-align:center}
+.photo img{width:320px;height:320px;border-radius:50%;object-fit:cover;border:6px solid #fff;box-shadow:0 20px 45px rgba(37,99,235,.25);animation:float 4s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px)}}
+section{max-width:1100px;margin:auto;padding:90px 24px}
+.title{text-align:center;font-size:38px;margin-bottom:10px}
+.line{width:80px;height:4px;background:#2563EB;margin:0 auto 45px;border-radius:99px}
+.card{background:#fff;padding:35px;border-radius:24px;box-shadow:0 10px 30px rgba(0,0,0,.05);border:1px solid #E5E7EB;line-height:1.9}
+.motto{margin-top:25px;padding:18px;background:#EFF6FF;border-left:4px solid #2563EB;border-radius:10px;font-style:italic}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.skill{background:#fff;padding:30px;border-radius:20px;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.05);transition:.3s}
+.skill:hover{transform:translateY(-8px)}
+.skill i{font-size:40px;color:#2563EB;margin-bottom:15px}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.contact{display:flex;align-items:center;gap:16px;background:#fff;padding:18px;border-radius:18px;text-decoration:none;color:#111827;box-shadow:0 8px 24px rgba(0,0,0,.05);border:1px solid #E5E7EB;transition:.3s}
+.contact:hover{transform:translateY(-5px)}
+.contact i{width:55px;height:55px;display:flex;align-items:center;justify-content:center;border-radius:14px;font-size:24px;color:#fff}
+.email i{background:#2563EB}
+.youtube i{background:#FF0000}
+.instagram i{background:#E1306C}
+.tiktok i{background:#111827}
+.discord i{background:#5865F2}
+footer{text-align:center;padding:30px;color:#64748B;border-top:1px solid #E5E7EB}
+.reveal{opacity:0;transform:translateY(30px);transition:1s}
+.reveal.active{opacity:1;transform:none}
+@media(max-width:900px){
+nav ul{display:none}
+.hero{grid-template-columns:1fr;text-align:center}
+.hero h1{font-size:42px}
+.photo img{width:230px;height:230px}
+}
 </style>
 </head>
-<body>
-<nav><div class="logo">MRP.</div><ul><li><a href="#about">Tentang</a></li><li><a href="#education">Pendidikan</a></li><li><a href="#skills">Skill</a></li><li><a href="#contact">Kontak</a></li></ul></nav>
 
-<section class="hero" id="home">
+<body>
+
+<nav>
+<div class="logo">MRP.</div>
+<ul>
+<li><a href="#about">Tentang</a></li>
+<li><a href="#education">Pendidikan</a></li>
+<li><a href="#skills">Skill</a></li>
+<li><a href="#contact">Kontak</a></li>
+</ul>
+</nav>
+
+<section class="hero">
 <div>
-<p style="letter-spacing:3px;color:#2563eb;font-weight:600">WELCOME TO MY PORTFOLIO</p>
-<h1>Moh. Rayhan <span class="blue">Pratama</span></h1>
+<h4>WELCOME TO MY PORTFOLIO</h4>
+<h1>Moh. Rayhan <span>Pratama</span></h1>
+
 <div class="typing" id="typing"></div>
-<p>Mahasiswa Informatika yang memiliki minat besar pada dunia teknologi, web development, desain visual, serta content creation.</p>
+
+<p>
+Mahasiswa Informatika yang memiliki minat besar pada dunia teknologi,
+pengembangan website, desain visual, dan content creation.
+</p>
+
 <a href="#about" class="btn">Kenali Saya</a>
 </div>
-<div style="display:flex;justify-content:center"><img src="rayhan.jpg" alt="Rayhan"></div>
+
+<div class="photo">
+<img src="hans.jpg" alt="Moh. Rayhan Pratama">
+</div>
 </section>
 
-<section id="about">
-<h2 class="title">Tentang Saya</h2><div class="line"></div>
+<section id="about" class="reveal">
+<h2 class="title">Tentang Saya</h2>
+<div class="line"></div>
+
 <div class="card">
-<p>Halo! Saya <b>Moh. Rayhan Pratama</b>, mahasiswa baru <b>Universitas Islam Negeri (UIN) Datokarama Palu</b> di Fakultas Sains dan Teknologi, Program Studi Informatika.</p><br>
-<p>Saya memiliki ketertarikan besar pada dunia <b>teknologi, pengembangan website, desain visual,</b> dan <b>content creation</b>. Di luar perkuliahan, saya aktif membuat konten seputar <b>GTA V Roleplay</b> dan dunia <b>FiveM</b>.</p><br>
-<p>Selain itu, saya juga sangat menikmati bermain berbagai jenis game dan rutin berolahraga. Hal yang paling menggambarkan diri saya adalah <b>rasa penasaran yang sangat kuat</b>—saya selalu tertarik mencoba hal baru, memecahkan masalah, dan terus berkembang.</p>
-<div style="margin-top:20px;padding:18px;background:#eff6ff;border-left:5px solid #2563eb;border-radius:10px"><i>“Belajar dengan tekun, berkarya dengan sepenuh hati, dan berkembang tanpa henti.”</i></div>
+<p>
+Halo! Saya <b>Moh. Rayhan Pratama</b>, mahasiswa baru
+<b>Universitas Islam Negeri (UIN) Datokarama Palu</b>
+di Fakultas Sains dan Teknologi, Program Studi Informatika.
+</p>
+
+<br>
+
+<p>
+Saya memiliki ketertarikan besar pada dunia teknologi, pengembangan website,
+desain visual, dan content creation. Di luar perkuliahan, saya aktif membuat
+konten seputar GTA V Roleplay dan FiveM sekaligus terus mengembangkan kemampuan
+di bidang pemrograman serta kreativitas digital.
+</p>
+
+<br>
+
+<p>
+Aku juga suka bermain banyak game, rutin berolahraga, dan memiliki jiwa penasaran
+yang sangat kuat. Bagiku, setiap tantangan adalah kesempatan untuk belajar dan berkembang.
+</p>
+
+<div class="motto">
+“Belajar dengan tekun, berkarya dengan sepenuh hati, dan berkembang tanpa henti.”
+</div>
 </div>
 </section>
 
-<section id="education">
-<h2 class="title">Pendidikan</h2><div class="line"></div>
-<div class="card"><h3 style="color:#2563eb">2026 — Sekarang</h3><h2>UIN Datokarama Palu</h2><p>Fakultas Sains dan Teknologi</p><p>Program Studi Informatika</p></div>
+<section id="education" class="reveal">
+<h2 class="title">Pendidikan</h2>
+<div class="line"></div>
+
+<div class="card">
+<h3 style="color:#2563EB;">2026 — Sekarang</h3>
+<h2>Universitas Islam Negeri Datokarama Palu</h2>
+<p>Fakultas Sains dan Teknologi</p>
+<p>Program Studi Informatika</p>
+</div>
 </section>
 
-<section id="skills">
-<h2 class="title">Skill & Minat</h2><div class="line"></div>
+<section id="skills" class="reveal">
+<h2 class="title">Skill & Minat</h2>
+<div class="line"></div>
+
 <div class="skills">
-<div class="skill"><i class="fa-solid fa-code"></i><h3>Web Development</h3><p>HTML • CSS • JavaScript</p></div>
-<div class="skill"><i class="fa-solid fa-camera"></i><h3>Content Creator</h3><p>YouTube & Thumbnail</p></div>
-<div class="skill"><i class="fa-solid fa-gamepad"></i><h3>FiveM</h3><p>QBCore • Roleplay</p></div>
-<div class="skill"><i class="fa-solid fa-dumbbell"></i><h3>Gaming & Sport</h3><p>Hobi & Kesehatan</p></div>
+
+<div class="skill">
+<i class="fa-solid fa-code"></i>
+<h3>Web Development</h3>
+<p>HTML • CSS • JavaScript</p>
+</div>
+
+<div class="skill">
+<i class="fa-solid fa-camera"></i>
+<h3>Content Creator</h3>
+<p>Thumbnail & Visual Design</p>
+</div>
+
+<div class="skill">
+<i class="fa-solid fa-gamepad"></i>
+<h3>FiveM</h3>
+<p>QBCore • Roleplay • Server</p>
+</div>
+
+<div class="skill">
+<i class="fa-solid fa-dumbbell"></i>
+<h3>Gaming & Sport</h3>
+<p>Game, Olahraga & Kreativitas</p>
+</div>
+
 </div>
 </section>
 
-<section id="contact">
-<h2 class="title">Hubungi Saya</h2><div class="line"></div>
+<section id="contact" class="reveal">
+<h2 class="title">Hubungi Saya</h2>
+<div class="line"></div>
+
 <div class="contact-grid">
-<a class="contact email" href="mailto:raayhanpratamaa@gmail.com?subject=Kerja%20Sama"><div class="icon"><i class="fa-solid fa-envelope"></i></div><div><h3>Email</h3><p>Kerja Sama</p></div></a>
-<a class="contact youtube" target="_blank" href="https://youtube.com/@xyhanr"><div class="icon"><i class="fa-brands fa-youtube"></i></div><div><h3>YouTube</h3><p>@xyhanr</p></div></a>
-<a class="contact instagram" target="_blank" href="https://instagram.com/xyhanr"><div class="icon"><i class="fa-brands fa-instagram"></i></div><div><h3>Instagram</h3><p>@xyhanr</p></div></a>
-<a class="contact tiktok" target="_blank" href="https://tiktok.com/@444.hansz"><div class="icon"><i class="fa-brands fa-tiktok"></i></div><div><h3>TikTok</h3><p>@444.hansz</p></div></a>
-<a class="contact discord" target="_blank" href="https://discord.gg/ynEj2mnZdR"><div class="icon"><i class="fa-brands fa-discord"></i></div><div><h3>Discord</h3><p>Join Community</p></div></a>
+
+<a class="contact email"
+href="mailto:raayhanpratamaa@gmail.com?subject=Kerja%20Sama">
+<i class="fa-solid fa-envelope"></i>
+<div>
+<b>Email</b><br>
+<small>Kerja Sama & Bisnis</small>
+</div>
+</a>
+
+<a class="contact youtube"
+href="https://youtube.com/@xyhanr" target="_blank">
+<i class="fa-brands fa-youtube"></i>
+<div>
+<b>YouTube</b><br>
+<small>@xyhanr</small>
+</div>
+</a>
+
+<a class="contact instagram"
+href="https://www.instagram.com/xyhanr" target="_blank">
+<i class="fa-brands fa-instagram"></i>
+<div>
+<b>Instagram</b><br>
+<small>@xyhanr</small>
+</div>
+</a>
+
+<a class="contact tiktok"
+href="https://www.tiktok.com/@444.hansz" target="_blank">
+<i class="fa-brands fa-tiktok"></i>
+<div>
+<b>TikTok</b><br>
+<small>@444.hansz</small>
+</div>
+</a>
+
+<a class="contact discord"
+href="https://discord.gg/ynEj2mnZdR" target="_blank">
+<i class="fa-brands fa-discord"></i>
+<div>
+<b>Discord</b><br>
+<small>Join Community</small>
+</div>
+</a>
+
 </div>
 </section>
 
-<footer>© 2026 Moh. Rayhan Pratama • All Rights Reserved</footer>
+<footer>
+© 2026 Moh. Rayhan Pratama • All Rights Reserved
+</footer>
+
 <script>
-const words=["Mahasiswa Baru UIN Datokarama Palu","Fakultas Sains dan Teknologi","Program Studi Informatika"];
-let i=0,j=0,d=false;const el=document.getElementById('typing');
-function t(){if(!d){el.textContent=words[i].slice(0,j++);if(j>words[i].length){d=true;setTimeout(t,1400);return;}}else{el.textContent=words[i].slice(0,j--);if(j===0){d=false;i=(i+1)%words.length;}}setTimeout(t,d?35:70)}t();
+const text=[
+"Mahasiswa Baru UIN Datokarama Palu",
+"Fakultas Sains dan Teknologi",
+"Program Studi Informatika"
+];
+
+let i=0,j=0,del=false;
+
+function typing(){
+const el=document.getElementById("typing");
+
+if(!del){
+el.innerHTML=text[i].substring(0,j++);
+if(j>text[i].length){
+del=true;
+setTimeout(typing,1400);
+return;
+}
+}else{
+el.innerHTML=text[i].substring(0,j--);
+if(j===0){
+del=false;
+i=(i+1)%text.length;
+}
+}
+setTimeout(typing,del?40:70);
+}
+typing();
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("active");
+}
+});
+});
+
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
 </script>
+
 </body>
 </html>
